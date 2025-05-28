@@ -15,3 +15,9 @@ for this I tried removing native routing
 I remove ipv4NativeRoutingCIDR and autoDirectNodeRoutes that will afect the preformance but I need healty cluster 
 I found cluster health 14/14 reachable  but this time 
 in this case to I had same problem 
+only around 40/254 got scheduled 
+also I found our perf-app-service was not working I found our certmanager webhooks were not working and reason was applecertificate was not working and we got same error timeout for call to 10.100.0.10 which was Ip assignbed to kube-dns service in kube-system namespace 
+
+so I again move to eni mode and want to work with ipam.mode=eni. routing =native and 
+Prefix Delegation for AWS EKS
+
